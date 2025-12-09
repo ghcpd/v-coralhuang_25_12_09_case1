@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waste Classifier</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Waste Classifier</h1>
+    <div class="upload-section">
+      <input type="file" id="imageInput" accept="image/*">
+      <button id="cameraBtn">Take Photo</button>
+      <button id="classifyBtn">Classify</button>
+    </div>
+    <div id="preview"></div>
+    <div id="result"></div>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="history">History</button>
+      <button class="tab-btn" data-tab="analytics">Analytics</button>
+    </div>
+    <div id="history" class="tab-content active">
+      <ul id="historyList"></ul>
+    </div>
+    <div id="analytics" class="tab-content">
+      <div id="analyticsData"></div>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>

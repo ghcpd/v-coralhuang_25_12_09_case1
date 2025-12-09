@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.upload-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+#preview img {
+  max-width: 100%;
+  max-height: 300px;
+  margin: 10px 0;
+}
+
+#result {
+  margin: 20px 0;
+  padding: 10px;
+  background: #e8f5e8;
+  border-radius: 4px;
+}
+
+.tabs {
+  margin: 20px 0;
+}
+
+.tab-btn {
+  background: #ddd;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: #4CAF50;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+#historyList {
+  list-style: none;
+  padding: 0;
+}
+
+#historyList li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feedback-btn {
+  background: #ff9800;
+  margin-left: 10px;
+}
+
+.feedback-btn.correct {
+  background: #4CAF50;
+}
+
+.feedback-btn.incorrect {
+  background: #f44336;
+}

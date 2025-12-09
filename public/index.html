@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Waste Sorter</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Waste Sorter</h1>
+
+    <section class="upload">
+      <input type="file" id="imageInput" accept="image/*" />
+      <button id="classifyBtn">Classify</button>
+      <div id="preview"></div>
+      <div id="result"></div>
+    </section>
+
+    <section class="history">
+      <h2>Recent Predictions</h2>
+      <ul id="historyList"></ul>
+    </section>
+
+    <section class="analytics">
+      <h2>Analytics</h2>
+      <pre id="analytics"></pre>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

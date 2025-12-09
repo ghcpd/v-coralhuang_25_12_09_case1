@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Sort - Smart Waste Classification</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">🌍 Waste Sort</h1>
+                <nav class="nav">
+                    <button class="nav-btn active" data-view="upload">Upload</button>
+                    <button class="nav-btn" data-view="history">History</button>
+                    <button class="nav-btn" data-view="analytics">Analytics</button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Upload Section -->
+            <section id="upload-view" class="view active">
+                <div class="upload-container">
+                    <h2>Upload Waste Item</h2>
+                    <p class="subtitle">Take a photo or upload an image of your waste item to get disposal guidance</p>
+
+                    <div class="upload-box" id="uploadBox">
+                        <div class="upload-icon">📸</div>
+                        <p class="upload-text">Click to upload or drag and drop</p>
+                        <p class="upload-hint">PNG, JPG, GIF or WebP (Max 10MB)</p>
+                        <input type="file" id="imageInput" accept="image/*" hidden>
+                    </div>
+
+                    <div id="previewContainer" class="preview-container hidden">
+                        <img id="previewImage" alt="Preview">
+                        <button id="removeImageBtn" class="btn-secondary">Remove</button>
+                    </div>
+
+                    <button id="classifyBtn" class="btn-primary hidden">Classify Waste</button>
+
+                    <div id="loading" class="loading hidden">
+                        <div class="spinner"></div>
+                        <p>Analyzing image...</p>
+                    </div>
+
+                    <div id="result" class="result hidden">
+                        <div class="result-card">
+                            <div class="category-badge" id="categoryBadge"></div>
+                            <div class="result-details">
+                                <h3 id="resultCategory"></h3>
+                                <p id="confidence"></p>
+                                <div class="bin-info">
+                                    <span class="bin-color" id="binColor"></span>
+                                    <span id="recyclableStatus"></span>
+                                </div>
+                                <div class="guidance-box">
+                                    <h4>Disposal Guidance:</h4>
+                                    <p id="guidance"></p>
+                                </div>
+                                <div class="feedback-section">
+                                    <label>Is this correct?</label>
+                                    <button class="feedback-btn" data-feedback="correct">✓ Correct</button>
+                                    <button class="feedback-btn" data-feedback="incorrect">✗ Incorrect</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="classifyAnotherBtn" class="btn-secondary">Classify Another</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- History Section -->
+            <section id="history-view" class="view">
+                <div class="history-container">
+                    <h2>Prediction History</h2>
+                    <div id="historyList" class="history-list"></div>
+                    <div id="historyLoading" class="loading hidden">
+                        <div class="spinner"></div>
+                    </div>
+                    <div id="noHistory" class="empty-state">
+                        <p>No predictions yet. Start by uploading an image!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Analytics Section -->
+            <section id="analytics-view" class="view">
+                <div class="analytics-container">
+                    <h2>Your Impact</h2>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h4>Total Predictions</h4>
+                            <p class="stat-value" id="totalPredictions">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Accuracy</h4>
+                            <p class="stat-value" id="accuracy">0%</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Recyclable Items (7d)</h4>
+                            <p class="stat-value" id="recyclableItems">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Recycle Rate</h4>
+                            <p class="stat-value" id="recycleRate">0%</p>
+                        </div>
+                    </div>
+
+                    <div class="chart-section">
+                        <h3>Category Breakdown</h3>
+                        <div id="categoryChart" class="category-chart"></div>
+                    </div>
+
+                    <div class="chart-section">
+                        <h3>Daily Activity (Last 7 Days)</h3>
+                        <div id="dailyChart" class="daily-chart"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

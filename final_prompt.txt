@@ -12,3 +12,5 @@ MongoDB – NoSQL database for storing classification history, timestamps, and u
 
 “Smart Trash Net: Waste Localization and Classification” — uses Faster R-CNN; dDeepWaste paper —
 Recent surveys / applications — overviews of DL for garbage/waste classification and urban litter detectionTrashNet — the classic starter
+
+Classes: 6 (cardboard, glass, metal, paper, plastic, trash) • ~2,527 images Link: Official GitHub (download dataset-resized.zip TACO — Trash Annotations in Context give all the codes with file names and giude

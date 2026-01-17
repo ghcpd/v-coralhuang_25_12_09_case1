@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Waste Sorter</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <h1>Waste Sorter</h1>
+
+      <section class="card upload">
+        <h2>Upload / Snap a Photo</h2>
+        <form id="uploadForm">
+          <input type="file" accept="image/*" id="imageInput" name="image" />
+          <button id="uploadBtn">Classify</button>
+        </form>
+        <div id="preview"></div>
+        <div id="result"></div>
+      </section>
+
+      <section class="card history">
+        <h2>History</h2>
+        <div id="historyList">Loading…</div>
+      </section>
+
+      <section class="card analytics">
+        <h2>Analytics</h2>
+        <div id="analytics">Loading…</div>
+      </section>
+
+    </main>
+    <script src="/main.js"></script>
+  </body>
+</html>

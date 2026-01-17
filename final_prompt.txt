@@ -1,0 +1,16 @@
+"messageid": "8ef6d077-55ff-5958-8381-7311153a6147"
+
+Build a web app that helps users sort waste correctly. The user uploads or snaps a photo of an item, and the app predicts the category (e.g., paper, plastic, glass, metal, organic, other) and shows disposal guidance (recyclable/non-recyclable and bin color per local rules). Save each prediction in the user’s history and show simple analytics (top items, accuracy feedback, daily impact).Frontend (User Interface)
+HTML5 / CSS3 / JavaScript (ES6) – core web technologies
+Axios / Fetch API – to send API requests to the backend Backend (Server & API Layer)
+Node.js + Express.js – to create RESTful APIs for communication between frontend and backend AI / Machine Learning Integration
+Hugging Face Inference API – to access a pre-trained Waste Classification model (e.g., nikhilroxtomar/garbage-classification
+) without training locally Database (Storage Layer)
+MongoDB – NoSQL database for storing classification history, timestamps, and user activity“Classification of Trash for Recyclability Status” — the original TrashNet CS229 report;
+
+“TACO: Trash Annotations in Context” — dataset & Mask R-CNN baselines for litter detection/segmentation;
+
+“Smart Trash Net: Waste Localization and Classification” — uses Faster R-CNN; dDeepWaste paper —
+Recent surveys / applications — overviews of DL for garbage/waste classification and urban litter detectionTrashNet — the classic starter
+
+Classes: 6 (cardboard, glass, metal, paper, plastic, trash) • ~2,527 images Link: Official GitHub (download dataset-resized.zip TACO — Trash Annotations in Context give all the codes with file names and giude

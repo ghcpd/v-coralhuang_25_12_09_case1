@@ -1,0 +1,25 @@
+{
+  "name": "waste-sorting-app",
+  "version": "1.0.0",
+  "description": "Smart Waste Classification Web Application",
+  "main": "backend/server.js",
+  "scripts": {
+    "backend": "cd backend && npm install && npm start",
+    "backend:dev": "cd backend && npm install && npm run dev",
+    "frontend": "cd frontend && npx http-server -p 8080",
+    "install-all": "npm install && cd backend && npm install && cd ..",
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend\""
+  },
+  "keywords": [
+    "waste",
+    "classification",
+    "recycling",
+    "machine-learning",
+    "environmental"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
